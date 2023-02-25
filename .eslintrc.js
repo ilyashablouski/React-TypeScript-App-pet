@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: ['react-app', 'react-app/jest', 'prettier'],
-  plugins: ['react-hooks', '@typescript-eslint'],
+  plugins: ['react-hooks'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: './tsconfig.json',
