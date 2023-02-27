@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from './components/Card';
 import { CardVariant } from './components/Card/Card';
-import UserList from './components/UserList';
 import { ITodo, IUser } from './types/types';
 import axios from 'axios';
 import { List } from './components/List/List';
