@@ -3,9 +3,10 @@ import Card from './components/Card';
 import { CardVariant } from './components/Card/Card';
 import { ITodo, IUser } from './types/types';
 import axios from 'axios';
-import { List } from './components/List/List';
+import List from './components/List/List';
 import UserItem from './components/UserList/UserItem';
 import TodoItem from './components/TodoItem';
+import EventsExample from './components/EventsExample';
 
 const App = () => {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -35,14 +36,15 @@ const App = () => {
   }
 
   return (
-    <>
+    <div>
+      <EventsExample />
       <Card variant={CardVariant.primary} height="200px" width="200px">
         <button>Кнопка</button>
         <p>Some children text</p>
       </Card>
       <List items={users} renderItem={(user: IUser) => <UserItem user={user} key={user.id} />} />
       <List items={todos} renderItem={(todo: ITodo) => <TodoItem todo={todo} key={todo.id} />} />
-    </>
+    </div>
   );
 };
 
